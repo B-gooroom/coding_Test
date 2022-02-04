@@ -1,0 +1,16 @@
+function solution(array, commands) {
+    var answer = [];
+    
+    for (const command of commands) {
+        // const i = command[0]
+        // const j = command[1]
+        // const k = command[2]
+        const [i, j, k] = command
+        console.log(i, j ,k)
+        const l = array.slice(i - 1, j).sort(function(a, b) {
+            return a - b
+        });
+        answer.push(l[k - 1])
+    }
+    return answer;
+}
