@@ -1,0 +1,21 @@
+function solution(left, right) {
+    var answer = 0;
+    for (let i = left; i <= right; i++) {
+        // console.log(i)
+        let total = 0
+        for (let j = 1; j <= i; j++) {
+            if (i % j === 0) {
+                // j = 1 ~ left, right
+                // i = 13 ~ 17
+                total++
+            }
+        }
+        // console.log(i, total);
+        if (total % 2 === 0) {
+            answer += i
+        } else {
+            answer -= i
+        }
+    }
+    return answer;
+}
