@@ -1,0 +1,30 @@
+function solution(answers) {
+    // answers = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1]
+    var answer = [0, 0, 0];
+    const 수포자1 = [1, 2, 3, 4, 5];
+    const 수포자2 = [2, 1, 2, 3, 2, 4, 2, 5];
+    const 수포자3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+    const 정답 = [];
+    for (let i = 0; i < answers.length; i++) {
+        // a[16 % 5]
+        if(수포자1[i % 수포자1.length] === answers[i] ) {
+            answer[0]++
+        }
+        if(수포자2[i % 수포자2.length] === answers[i] ) {
+            answer[1]++
+        }
+        if(수포자3[i % 수포자3.length] === answers[i] ) {
+            answer[2]++
+        }
+    }
+    var max = answer.reduce(function(a, b) {
+        return Math.max(a, b);
+    })
+    for (let i = 0; i < answer.length; i++) {
+        if (max === answer[i]) {
+            정답.push(i + 1);
+        }
+    }
+    console.log(max);
+    return 정답;
+}
