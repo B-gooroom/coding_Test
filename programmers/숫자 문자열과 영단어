@@ -1,0 +1,10 @@
+function solution(s) {
+    // let s = 'one4seveneightone';
+    const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    for (let i in words) {
+        while(s.indexOf(words[i]) >= 0) {
+            s = s.replace(words[i], i)    
+        }
+    }
+    return Number(s);
+}
