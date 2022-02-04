@@ -1,0 +1,14 @@
+function solution(seoul) {
+    // var answer = -1;
+    // answer = seoul.indexOf("Kim") 
+    // for (let index1 = 0; index1 < seoul.length; index1++) {
+        // TODO: for문을 돌면서 'Kim'을 찾는다..
+        // DONE: seoul에 원소를 console.log 찍어보기
+        // if (seoul[index1] === "Kim") {
+        //     answer = [index1]
+        //     break;
+        // }
+    // }
+    // console.log("김서방은 " + answer + "에 있다")
+    return "김서방은 " + seoul.indexOf("Kim") + "에 있다";
+}
