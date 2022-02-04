@@ -1,0 +1,15 @@
+function solution(numbers) {
+    var answer = {};
+    for (let i = 0; i < numbers.length - 1; i++) {
+        // answer[] = true
+        for (let j = i + 1; j < numbers.length; j++) {
+            answer[numbers[i] + numbers[j]] = true
+        }
+    }
+    let total = []
+    for (let result in answer) {
+        total.push(Number(result));
+        // console.log(result)
+    }
+    return total;
+}
