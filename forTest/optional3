@@ -1,0 +1,17 @@
+[친구 찾기]
+# 이름이 4글자면 친구입니다. 친구를 찾는 함수를 작성해주세요.
+-----
+* 입력받은 순서를 유지해서 출력해주세요.
+
+const foo = (users) => {
+  const friends = [];
+  for (let i = 0; i < users.length; i++) {
+    const user = users[i];
+    if (user.length === 4) {
+      friends.push(user);
+    }
+  }
+  return friends;
+}
+
+// console.log(foo(["Ryan", "Kieran", "Mark"]));
