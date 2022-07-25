@@ -1,0 +1,27 @@
+[아이큐 테스트]
+# 홀수 또는 짝수중에 하나만 존재하는 값의 순번을 출력하는 함수를 작성해주세요.
+-----
+* 순번의 시작은 0이 아니라 1입니다.
+
+const foo = (numbers) => {
+  numbers = numbers.split(' ');
+
+  const odds = []; // 홀수
+  const evens = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    if (num % 2) {
+      odds.push({ num, i });
+    } else {
+      evens.push({ num, i });
+    }
+  }
+  if (odds.length === 1) {
+    return odds[0].i + 1;
+  }
+  return evens[0].i + 1;
+}
+
+// console.log(foo("2 4 7 8 10"));
+// console.log(foo("1 2 1 1"));
