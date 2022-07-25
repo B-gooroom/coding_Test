@@ -1,0 +1,15 @@
+[분기 숫자 구하기]
+# 1~12월중에 숫자를 입력받고 1분기, 2분기, 3분기, 4분기를 리턴하는 함수를 작성해주세요.
+-----
+* 1부터 12까지의 숫자만 입력합니다.
+
+const foo = (month) => {
+  if (isNaN(Number.parseInt(month)) || (month < 1 || month > 12)) {
+    return '1부터 12까지의 숫자만 입력 가능합니다!';
+  }
+  return Math.ceil(month / 3);
+};
+
+// console.log(foo(3));
+// console.log(foo(8));
+// console.log(foo(11));
