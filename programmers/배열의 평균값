@@ -1,0 +1,11 @@
+function solution(numbers) {
+    var answer = 0;
+    let plus = 0;
+    
+    for (let i = 0; i < numbers.length; i++) {
+        plus = plus + numbers[i]
+        answer = i
+    }
+    const cal = plus/(answer + 1);
+    return cal;
+}
