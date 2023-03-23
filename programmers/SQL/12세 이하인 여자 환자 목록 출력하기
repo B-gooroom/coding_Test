@@ -1,3 +1,4 @@
+```sql
 SELECT
   PT_NAME,
   PT_NO,
@@ -8,3 +9,4 @@ FROM PATIENT
 WHERE (AGE <= 12)
   AND GEND_CD IN ('W')
 ORDER BY AGE DESC, PT_NAME ASC
+```
